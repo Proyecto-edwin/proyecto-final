@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="assets/light.png" type="image/x-icon" sizes="16x16" />
+		<title>Trello JS App</title>
+
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<!-- MODAL -->
+		<div class="modal" id="modal1">
+			<div class="modal__dialog">
+				<header class="modal__header">
+					Write a new TO-DO and press 'Enter'
+					<button class="modal__close" data-close>X</button>
+				</header>
+				<section class="modal__content">
+					<!-- ALERT -->
+					<div id="alert__empty"></div>
+					<form action="">
+						<label for="todo1">TO-DO:</label>
+						<input type="text" id="todo1" name="todo1" autofocus />
+
+						<button id="add__task">ADD</button>
+					</form>
+				</section>
+			</div>
+		</div>
+
+		<main>
+			<div class="container">
+				<!-- NAV BAR -->
+				<nav class="main-nav">
+					<ul>
+						<li><a href="">Trello JS App</a></li>
+						<li><a class="link-web" href="https://github.com/jgcarrillo/" target="_blank">GITHUB</a></li>
+						<li><a class="link-web" href="http://jgcarrillo.com/" target="_blank">JGCarrillo</a></li>
+					</ul>
+				</nav>
+
+				<!-- MAIN CONTENT -->
+				<div class="to-do dropzone">
+					<h3>TO-DO</h3>
+					<button class="add-todo" data-open="modal1">ADD TO-DO</button>
+					<div class="container__todo card" draggable="true" style="display: none">Example</div>
+				</div>
+				<div class="doing dropzone">
+					<h3>DOING</h3>
+				</div>
+				<div class="done dropzone">
+					<h3>DONE</h3>
+				</div>
+				<!-- FOOTER -->
+				<footer class="main-footer">
+					<address>JGCarrillo - 2021 &copy; - All rights reserved</address>
+				</footer>
+			</div>
+		</main>
+
+		<!-- JS CODE -->
+		<script src="js/Task.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
