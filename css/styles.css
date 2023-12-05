@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400;500&family=Rubik+Puddles&display=swap');
+
+
 :root {
 	--bg-color: #1d3557;
 	--navbar-color: #457b9d;
@@ -16,7 +19,8 @@
 }
 
 body {
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'Bebas Neue';
+	font-weight: 90;
 	background-color: var(--bg-color);
 	color: black;
 }
@@ -25,7 +29,7 @@ body {
 /* GRID */
 /* ***** */
 .container {
-	padding: 1rem;
+	padding: 1em;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: 0.1fr 1fr 0.1fr;
@@ -38,7 +42,6 @@ body {
 		'main-nav main-nav main-nav'
 		'todo doing done'
 		'main-footer main-footer main-footer';
-
 }
 
 .main-footer {
@@ -46,23 +49,24 @@ body {
 	justify-content: center;
 	align-items: center;
 	grid-area: main-footer;
-	background:linear-gradient(
-		to left,
-		#002f72,#0097e8,#001738
+	background: linear-gradient(
+		to right,
+		#000c11,#009c97,#000101
 	);
 	padding-top: var(--padding);
 	border-radius: var(--radius);
-	color: white;
-}
+	color: #060039;
+	font-size: 2rem;
+}	
 
 .main-nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	grid-area: main-nav;
-	background:linear-gradient(
-		to left,
-		#002f72,#0097e8,#001738
+	background: linear-gradient(
+		to right,
+		#000c11,#009c97,#000101
 	);
 	padding-top: var(--padding);
 	border-radius: var(--radius);
@@ -70,31 +74,22 @@ body {
 
 .to-do {
 	grid-area: todo;
-	background:linear-gradient(
-		to top,
-		#113a72,#0097e8,#f7f7f7
-	);
-	min-height: 8rem;
+	background-color: var(--cards-color);
+	min-height: 8em;
 	padding-top: var(--padding);
 	border-radius: var(--radius);
 }
 
 .doing {
 	grid-area: doing;
-	background:linear-gradient(
-		to top,
-		#113a72,#0097e8,#f7f7f7
-	);
+	background-color: var(--cards-color);
 	padding-top: var(--padding);
 	border-radius: var(--radius);
 }
 
 .done {
 	grid-area: done;
-	background:linear-gradient(
-		to top,
-		#113a72,#0097e8,#f7f7f7
-	);
+	background-color: var(--cards-color);
 	padding-top: var(--padding);
 	border-radius: var(--radius);
 }
@@ -103,7 +98,7 @@ body {
 /* NAVBAR */
 /* ******* */
 nav a {
-	color: white;
+	color:rgb(255, 255, 255);
 	text-decoration: none;
 }
 
@@ -126,15 +121,15 @@ a {
 	font-weight: bold;
 	margin: 1rem;
 	transition: all 300ms;
+	font-size: 2rem;
 }
 
 a:hover {
-	color: #0030cd;
+	color: #00ebf7;
 }
 
 .link-web {
-	color:#f1faee;
-	font-size: 20px;
+	color: #000000;
 }
 
 /* ******* */
@@ -151,10 +146,13 @@ button {
 	font-size: 1.2em;
 	transition: all 300ms;
 	margin-top: 10px;
+	border-radius: 6px;
+	color:rgb(0, 0, 0)f;
 }
 
 button:hover {
-	background-color: rgb(30, 69, 155);
+	background-color: rgb(56, 124, 126);
+	box-shadow: 0 0 10px #00ebf7;
 }
 
 /* ***** */
@@ -213,12 +211,12 @@ button:hover {
 	position: relative;
 	max-width: 800px;
 	max-height: 80vh;
-	background: rgb(229, 238, 247);
+	border-radius: var(--radius);
+	background: var(--cards-color);
 	overflow: auto;
 	cursor: default;
 	width: 40%;
 	font-size: 1.2em;
-	border-radius: 1rem;
 }
 
 .modal__dialog > * {
@@ -229,7 +227,7 @@ button:hover {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color: rgb(0, 38, 255);
+	background-color: var(--navbar-color);
 	color: white;
 }
 
@@ -303,9 +301,7 @@ label {
 .remove__button:hover {
 	background-color: rgb(255, 205, 205);
 }
-.main-footer address{
-	font-size: 20px;
-}
+
 /* ************** */
 /* MEDIA QUERIES */
 /* ************** */
